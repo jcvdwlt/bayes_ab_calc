@@ -25,9 +25,8 @@ label {
 
 #calculator {
     color: #1d3557;
-    width: 80%;
     max-width: 700px;
-    height: 70vh;
+    height: 600px;
     margin: 0 auto;
     /* padding: 20px 0 0 0; */
     background-color: white;
