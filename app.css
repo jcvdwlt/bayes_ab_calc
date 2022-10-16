@@ -44,6 +44,7 @@ label {
 .data_entry_button {
     padding: 1em 1em 0em 1em;
     display: flex;
+    display: -webkit-flex;
 }
 
 #plot {
@@ -97,6 +98,7 @@ label {
 
     .data_entry_button {
         justify-content: center;
+        -webkit-justify-content: center;
     }
 
     .data_entry_radio {
