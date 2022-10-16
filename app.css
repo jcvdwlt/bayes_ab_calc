@@ -1,0 +1,112 @@
+body {
+    /* background-color: DarkGray; */
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #1d3557;
+}
+
+.A {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.B {
+    color: #a8dadc;
+    font-weight: bold;
+}
+
+label {
+    padding: 0 0 0 1em;
+}
+
+#calculator {
+    color: #1d3557;
+    width: 80%;
+    max-width: 700px;
+    height: 70vh;
+    margin: 0 auto;
+    /* padding: 20px 0 0 0; */
+    background-color: white;
+    border: solid;
+    border-color: #a8dadc;
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+#result_string {
+    padding: 2em 1em 0em 1em;
+    text-align: center;
+}
+
+.data_entry_row {
+    padding: 1em 1em 0em 1em;
+    display: flex;
+}
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .data_entry_row {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .data_entry_radio {
+        align-items: flex-end;
+    }
+
+    #calculator {
+        font-size: 16px;
+        width: 350px;
+        height: 90vh;
+    }
+
+    #plot {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.data_entry_radio {
+    padding: 1em 1em 0em 2em;
+}
+
+.data_entry_row input[type=text] {
+    width: 60px;
+    border-radius: .5em;
+}
+
+.footer {
+    text-align: center;
+    font-size: 10px;
+}
+
+.value_data {
+    visibility: hidden;
+}
+
+.data_entry_row label {
+    width: 120px;
+}
+
+#calculate_button {
+    font-size: 16px;
+    color: #1d3557;
+    background: #a8dadc;
+    border-color: #a8dadc;
+    appearance: none;
+    border-radius: 2em;
+}
+
+#plot {
+    width: 60%;
+    height: 40%;
+    margin: 0 auto;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,800;1,100;1,500;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+    <title>Bayesian A/B test calculator</title>
+</head>
+
+<body>
+    <h1>Bayesian <span class="A">A</span>/<span class="B">B</span> test calculator</h1>
+
+    <div id="calculator">
+
+        <div class="data_entry_row">
+            <span>
+                <label for="n_a"># Visitors <span class="A">A</span></label>
+                <input type="text" id="n_a" class="test_input" value="100">
+            </span>
+            <span>
+                <label for="s_a"># Conversions <span class="A">A</span></label>
+                <input type="text" id="s_a" class="test_input" value="30">
+            </span>
+
+            <span class="value_data">
+                <label for="v_a">Conversion value <span class="A">A</span></label>
+                <input type="text" id="v_a" class="test_input" value="1">
+            </span>
+        </div>
+
+        <div class="data_entry_row">
+            <span>
+                <label for="n_b"># Visitors <span class="B">B</span></label>
+                <input type="text" id="n_b" class="test_input" value="100">
+            </span>
+            <span>
+                <label for="s_b"># Conversions <span class="B">B</span></label>
+                <input type="text" id="s_b" class="test_input" value="35">
+            </span>
+            <span class="value_data">
+                <label for="v_b">Conversion value <span class="B">B</span></label>
+                <input type="text" id="v_b" class="test_input" value="1">
+            </span>
+        </div>
+
+        <div class="data_entry_row">
+            <span>
+                <label for="margin">Outperformance margin (%)</label>
+                <input type="text" id="margin" class="test_input" value="5">
+            </span>
+        </div>
+
+        <div class="data_entry_radio">
+            <div>
+                <input type="radio" name="test_type" id="rate" required value="rate" checked onclick="hideValueInput()">
+                <label for="rate">Conversion rate</label>
+            </div>
+            <div>
+                <input type="radio" name="test_type" id="value" required value="value" onclick="hideValueInput()">
+                <label for="value">Conversion value</label>
+            </div>
+        </div>
+
+        <div class="data_entry_row">
+            <button id="calculate_button" onclick="updatePlot()">Calcuate</button>
+        </div>
+
+        <div id="result_string">
+        </div>
+
+        <!-- PLOT -->
+        <div id="plot"></div>
+
+
+    </div>
+    <div class="footer">
+        <p>Made by <a href="https://www.linkedin.com/in/jc-van-der-walt">JC van der Walt</a></p>
+    </div>
+
+
+    <!-- javascript imports -->
+    <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
