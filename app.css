@@ -48,7 +48,7 @@ label {
 #plot {
     width: 60%;
     height: 40%;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
 }
 
 .data_entry_radio {
@@ -105,6 +105,6 @@ label {
 
     #plot {
         width: 100%;
-        height: 30%;
+        height: 40%;
     }
 }
