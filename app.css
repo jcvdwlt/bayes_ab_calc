@@ -40,7 +40,8 @@ label {
     text-align: center;
 }
 
-.data_entry_row {
+.data_entry_row,
+.data_entry_button {
     padding: 1em 1em 0em 1em;
     display: flex;
 }
@@ -48,7 +49,7 @@ label {
 #plot {
     width: 60%;
     height: 40%;
-    margin: 0 auto 4px auto;
+    margin: 0 auto 5px auto;
 }
 
 .data_entry_radio {
@@ -75,6 +76,7 @@ label {
 
 #calculate_button {
     font-size: 16px;
+    font-weight: bold;
     color: #1d3557;
     background: #a8dadc;
     border-color: #a8dadc;
@@ -91,6 +93,10 @@ label {
     .data_entry_row {
         flex-direction: column;
         align-items: flex-end;
+    }
+
+    .data_entry_button {
+        justify-content: center;
     }
 
     .data_entry_radio {
