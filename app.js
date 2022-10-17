@@ -160,6 +160,17 @@ function hideValueInput() {
     }
 }
 
+function copyUrl() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("URL copied to clipboard!");
+
+}
+
+function shareViaGmail() {
+    let url = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=AB+test+results&body=' + window.location.href + '&ui=2&tf=1&pli=1';
+    window.open(url, 'sharer', 'toolbar=0,status=0,width=648,height=395');
+}
+
 const defualtParams = {
     n_a: 100,
     s_a: 30,

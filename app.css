@@ -85,6 +85,17 @@ label {
     border-radius: 2em;
 }
 
+#share_button {
+    margin: 1em 0 0 0;
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: #a8dadc;
+    background: #1d3557;
+    border-color: #a8dadc;
+    appearance: none;
+    border-radius: 2em;
+}
+
 @media (max-width: 900px) {
 
     h1 {
