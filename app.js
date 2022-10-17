@@ -160,5 +160,41 @@ function hideValueInput() {
     }
 }
 
+const defualtParams = {
+    n_a: 100,
+    s_a: 30,
+    v_a: 1,
+    n_b: 100,
+    s_b: 35,
+    v_b: 1,
+    margin: 5
+}
+
+let calculate = true;
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+for (const def in defualtParams) {
+    if (urlParams.has(def)) {
+        document.querySelector(`#${def}`).value = urlParams.get(def);
+        console.log(`From url ${def}: ${urlParams.get(def)}`);
+    } else {
+        document.querySelector(`#${def}`).value = defualtParams[def];
+        calculate = false;
+        console.log(`Default ${def}: ${defualtParams[def]}`);
+    }
+}
 
 
+if (urlParams.get('test_type') === "value") {
+    document.querySelector('#value').checked = true;
+    hideValueInput();
+} else {
+    document.querySelector('#rate').checked = true;
+    hideValueInput();
+};
+
+if (calculate) {
+    updatePlot()
+}
