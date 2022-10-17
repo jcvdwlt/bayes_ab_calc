@@ -21,58 +21,62 @@
 
     <div id="calculator">
 
-        <div class="data_entry_row">
-            <span>
-                <label for="n_a"># Visitors <span class="A">A</span></label>
-                <input type="text" id="n_a" class="test_input" value="100">
-            </span>
-            <span>
-                <label for="s_a"># Conversions <span class="A">A</span></label>
-                <input type="text" id="s_a" class="test_input" value="30">
-            </span>
+        <form action="">
 
-            <span class="value_data">
-                <label for="v_a">Conversion value <span class="A">A</span></label>
-                <input type="text" id="v_a" class="test_input" value="1">
-            </span>
-        </div>
+            <div class="data_entry_row">
+                <span>
+                    <label for="n_a"># Visitors <span class="A">A</span></label>
+                    <input type="text" id="n_a" class="test_input" name="n_a">
+                </span>
+                <span>
+                    <label for="s_a"># Conversions <span class="A">A</span></label>
+                    <input type="text" id="s_a" class="test_input" name="s_a">
+                </span>
 
-        <div class="data_entry_row">
-            <span>
-                <label for="n_b"># Visitors <span class="B">B</span></label>
-                <input type="text" id="n_b" class="test_input" value="100">
-            </span>
-            <span>
-                <label for="s_b"># Conversions <span class="B">B</span></label>
-                <input type="text" id="s_b" class="test_input" value="35">
-            </span>
-            <span class="value_data">
-                <label for="v_b">Conversion value <span class="B">B</span></label>
-                <input type="text" id="v_b" class="test_input" value="1">
-            </span>
-        </div>
-
-        <div class="data_entry_row">
-            <span>
-                <label for="margin">Outperformance margin (%)</label>
-                <input type="text" id="margin" class="test_input" value="5">
-            </span>
-        </div>
-
-        <div class="data_entry_radio">
-            <div>
-                <input type="radio" name="test_type" id="rate" required value="rate" checked onclick="hideValueInput()">
-                <label for="rate">Conversion rate</label>
+                <span class="value_data">
+                    <label for="v_a">Conversion value <span class="A">A</span></label>
+                    <input type="text" id="v_a" class="test_input" name="v_a">
+                </span>
             </div>
-            <div>
-                <input type="radio" name="test_type" id="value" required value="value" onclick="hideValueInput()">
-                <label for="value">Conversion value</label>
-            </div>
-        </div>
 
-        <div class="data_entry_button">
-            <button id="calculate_button" onclick="updatePlot()">Calcuate</button>
-        </div>
+            <div class="data_entry_row">
+                <span>
+                    <label for="n_b"># Visitors <span class="B">B</span></label>
+                    <input type="text" id="n_b" class="test_input" name="n_b">
+                </span>
+                <span>
+                    <label for="s_b"># Conversions <span class="B">B</span></label>
+                    <input type="text" id="s_b" class="test_input" name="s_b">
+                </span>
+                <span class="value_data">
+                    <label for="v_b">Conversion value <span class="B">B</span></label>
+                    <input type="text" id="v_b" class="test_input" name="v_b">
+                </span>
+            </div>
+
+            <div class="data_entry_row">
+                <span>
+                    <label for="margin">Outperformance margin (%)</label>
+                    <input type="text" id="margin" class="test_input" name="margin">
+                </span>
+            </div>
+
+            <div class="data_entry_radio">
+                <div>
+                    <input type="radio" name="test_type" id="rate" required value="rate" onclick="hideValueInput()">
+                    <label for="rate">Conversion rate</label>
+                </div>
+                <div>
+                    <input type="radio" name="test_type" id="value" required value="value" onclick="hideValueInput()">
+                    <label for="value">Conversion value</label>
+                </div>
+            </div>
+
+            <div class="data_entry_button">
+                <button id="calculate_button">Calcuate</button>
+            </div>
+
+        </form>
 
         <div id="result_string">
         </div>
@@ -83,7 +87,14 @@
 
     </div>
     <div class="footer">
+        <div class="share_button">
+            <button id="share_button" onclick="copyUrl()">Shareable link</button>
+        </div>
+
         <p>Made by <a href="https://www.linkedin.com/in/jc-van-der-walt">JC van der Walt</a></p>
+
+
+
     </div>
 
 
